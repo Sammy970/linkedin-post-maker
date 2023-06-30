@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LeftComponent.css";
+import { api } from "../api_call_function/api_func";
 
-const LeftComponent = () => {
+const LeftComponent = ({ setOutput }) => {
+  const [topic, setTopic] = useState("Certi");
+  const [pub, setPub] = useState("");
+  const [title, setTitle] = useState("");
+  const [duration, setDuration] = useState("");
+  const [skill, setSkills] = useState("");
+  const [extraDetails, setExtraDetails] = useState("");
+
+  const handleButton = () => {
+    const data = api(topic, pub, title, duration, skill, extraDetails);
+    setOutput(data);
+  };
+
   return (
     <div className="flex items-center justify-center h-full">
       <div className="leftContainer max-w-md mx-auto p-4">
@@ -16,6 +29,9 @@ const LeftComponent = () => {
             id="selectOption"
             name="selectOption"
             className="block w-full p-2 border border-gray-300 rounded-md"
+            onChange={(e) => {
+              setTopic(e.target.value);
+            }}
           >
             <option value="certi">Certificate</option>
             <option value="conf">Conference</option>
@@ -31,6 +47,9 @@ const LeftComponent = () => {
             name="textInput"
             placeholder="Eg. Coursera, Udemy"
             className="block w-full p-2 border border-gray-300 rounded-md"
+            onChange={(e) => {
+              setPub(e.target.value);
+            }}
           />
         </div>
         <div className="mb-4">
@@ -43,6 +62,9 @@ const LeftComponent = () => {
             name="textInput"
             placeholder="Eg. Frontend by META"
             className="block w-full p-2 border border-gray-300 rounded-md"
+            onChange={(e) => {
+              setTitle(e.target.value);
+            }}
           />
         </div>
         <div className="mb-4">
@@ -55,6 +77,9 @@ const LeftComponent = () => {
             name="textInput"
             placeholder="Eg. 3/5 Months/Weaks etc"
             className="block w-full p-2 border border-gray-300 rounded-md"
+            onChange={(e) => {
+              setDuration(e.target.value);
+            }}
           />
         </div>
         <div className="mb-4">
@@ -67,6 +92,9 @@ const LeftComponent = () => {
             name="textInput"
             placeholder="Eg. JavaScript, React, etc"
             className="block w-full p-2 border border-gray-300 rounded-md"
+            onChange={(e) => {
+              setSkills(e.target.value);
+            }}
           />
         </div>
         <div className="mb-4">
@@ -79,10 +107,13 @@ const LeftComponent = () => {
             name="textInput"
             placeholder="Eg. Info related to course, etc"
             className="block w-full p-2 border border-gray-300 rounded-md"
+            onChange={(e) => {
+              setExtraDetails(e.target.value);
+            }}
           />
         </div>
         <div className="">
-          <button>Submit</button>
+          <button onClick={handleButton}>Submit</button>
         </div>
       </div>
     </div>
