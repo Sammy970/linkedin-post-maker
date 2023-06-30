@@ -3,7 +3,7 @@ import "./LeftComponent.css";
 import { api } from "../api_call_function/api_func";
 
 const LeftComponent = ({ setOutput, setLoadingState }) => {
-  const [topic, setTopic] = useState("Certi");
+  const [topic, setTopic] = useState("Certification");
   const [pub, setPub] = useState("");
   const [title, setTitle] = useState("");
   const [duration, setDuration] = useState("");
@@ -41,8 +41,8 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
               setTopic(e.target.value);
             }}
           >
-            <option value="certi">Certificate</option>
-            <option value="conf">Conference</option>
+            <option value="certification">Certification</option>
+            <option value="conference">Conference</option>
           </select>
         </div>
         <div className="mb-4">
