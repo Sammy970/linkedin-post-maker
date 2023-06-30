@@ -81,6 +81,9 @@ const LeftComponent = () => {
             className="block w-full p-2 border border-gray-300 rounded-md"
           />
         </div>
+        <div className="">
+          <button>Submit</button>
+        </div>
       </div>
     </div>
   );
