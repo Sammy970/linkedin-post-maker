@@ -1,9 +1,9 @@
 import React from 'react'
 
-const leftComponent = () => {
+const LeftComponent = () => {
   return (
     <div>leftComponent</div>
   )
 }
 
-export default leftComponent
+export default LeftComponent

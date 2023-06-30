@@ -1,9 +1,9 @@
 import React from 'react'
 
-const rightComponent = () => {
+const RightComponent = () => {
   return (
     <div>rightComponent</div>
   )
 }
 
-export default rightComponent
+export default RightComponent

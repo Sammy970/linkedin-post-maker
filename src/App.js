@@ -1,14 +1,14 @@
 import "./App.css";
 
 // Importing Components
-import leftComponent from "./Components/leftComponent";
-import rightComponent from "./Components/rightComponent";
+import LeftComponent from "./Components/LeftComponent";
+import RightComponent from "./Components/RightComponent";
 
 function App() {
   return (
     <>
-      <leftComponent />
-      <rightComponent />
+      <LeftComponent />
+      <RightComponent />
     </>
   );
 }
