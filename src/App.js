@@ -1,8 +1,8 @@
 import "./App.css";
 
 // Importing Components
-import LeftComponent from "./Components/LeftComponent";
-import RightComponent from "./Components/RightComponent";
+import LeftComponent from "./Components/leftComponent";
+import RightComponent from "./Components/rightComponent";
 
 function App() {
   return (
