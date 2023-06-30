@@ -11,8 +11,16 @@ const LeftComponent = ({ setOutput }) => {
   const [extraDetails, setExtraDetails] = useState("");
 
   const handleButton = () => {
-    const data = api(topic, pub, title, duration, skill, extraDetails);
-    setOutput(data);
+    const data = api(
+      topic,
+      pub,
+      title,
+      duration,
+      skill,
+      extraDetails,
+      setOutput
+    );
+    // setOutput(data);
   };
 
   return (

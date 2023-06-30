@@ -11,7 +11,7 @@ const RightComponent = ({ output }) => {
   const markdown = `${output}`;
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="rightContainer max-w-lg mx-auto p-4">
+      <div className="rightContainer p-4">
         <div className="pb-10">
           <h1 className="text-lg text-center">Output</h1>
         </div>
