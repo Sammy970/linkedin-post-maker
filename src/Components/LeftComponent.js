@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./LeftComponent.css";
 import { api } from "../api_call_function/api_func";
+import Certification from "./Topics/Certification";
+import Conference from "./Topics/Conference";
 
 const LeftComponent = ({ setOutput, setLoadingState }) => {
-  const [topic, setTopic] = useState("Certification");
+  const [topic, setTopic] = useState("certification");
   const [pub, setPub] = useState("");
   const [title, setTitle] = useState("");
   const [duration, setDuration] = useState("");
@@ -45,81 +47,18 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
             <option value="conference">Conference</option>
           </select>
         </div>
-        <div className="mb-4">
-          <label htmlFor="textInput" className="block font-medium mb-1">
-            Publication:
-          </label>
-          <input
-            type="text"
-            id="textInput"
-            name="textInput"
-            placeholder="Eg. Coursera, Udemy"
-            className="block w-full p-2 border border-gray-300 rounded-md"
-            onChange={(e) => {
-              setPub(e.target.value);
-            }}
+
+        {topic === "certification" && (
+          <Certification
+            setPub={setPub}
+            setTitle={setTitle}
+            setDuration={setDuration}
+            setSkills={setSkills}
+            setExtraDetails={setExtraDetails}
           />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="textInput" className="block font-medium mb-1">
-            Title of Course:
-          </label>
-          <input
-            type="text"
-            id="textInput"
-            name="textInput"
-            placeholder="Eg. Frontend by META"
-            className="block w-full p-2 border border-gray-300 rounded-md"
-            onChange={(e) => {
-              setTitle(e.target.value);
-            }}
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="textInput" className="block font-medium mb-1">
-            Duration of Course:
-          </label>
-          <input
-            type="text"
-            id="textInput"
-            name="textInput"
-            placeholder="Eg. 3/5 Months/Weaks etc"
-            className="block w-full p-2 border border-gray-300 rounded-md"
-            onChange={(e) => {
-              setDuration(e.target.value);
-            }}
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="textInput" className="block font-medium mb-1">
-            Skills gained with the Course:
-          </label>
-          <input
-            type="text"
-            id="textInput"
-            name="textInput"
-            placeholder="Eg. JavaScript, React, etc"
-            className="block w-full p-2 border border-gray-300 rounded-md"
-            onChange={(e) => {
-              setSkills(e.target.value);
-            }}
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="textInput" className="block font-medium mb-1">
-            Extra Details:
-          </label>
-          <input
-            type="text"
-            id="textInput"
-            name="textInput"
-            placeholder="Eg. Info related to course, etc"
-            className="block w-full p-2 border border-gray-300 rounded-md"
-            onChange={(e) => {
-              setExtraDetails(e.target.value);
-            }}
-          />
-        </div>
+        )}
+
+        {topic === "conference" && <Conference />}
         <div className="">
           <button onClick={handleButton}>Submit</button>
         </div>
