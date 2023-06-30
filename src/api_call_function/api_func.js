@@ -7,10 +7,13 @@ export const api = async (
   duration,
   skill,
   extraDetails,
-  setOutput
+  setOutput,
+  setLoadingState
 ) => {
   const api_url = "https://chimeragpt.adventblocks.cc/v1/chat/completions";
   const api_key = "";
+
+  setLoadingState(true);
 
   const response = await axios.post(
     `${api_url}`,
@@ -31,8 +34,8 @@ export const api = async (
       },
     }
   );
-
   const data = await response.data.choices[0].message.content;
+  setLoadingState(false);
   console.log(data);
   setOutput(data);
 };

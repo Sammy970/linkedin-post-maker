@@ -7,14 +7,19 @@ import RightComponent from "./Components/RightComponent";
 
 function App() {
   const [output, setOutput] = useState("Enter Some Values");
+  const [loadingState, setLoadingState] = useState(false);
+
   return (
     <>
       <div className="grid lg:grid-cols-2 h-screen">
         <div className="w-full bg1">
-          <LeftComponent setOutput={setOutput} />
+          <LeftComponent
+            setOutput={setOutput}
+            setLoadingState={setLoadingState}
+          />
         </div>
         <div className="w-full bg2">
-          <RightComponent output={output} />
+          <RightComponent output={output} loadingState={loadingState} />
         </div>
       </div>
     </>

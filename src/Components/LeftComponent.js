@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./LeftComponent.css";
 import { api } from "../api_call_function/api_func";
 
-const LeftComponent = ({ setOutput }) => {
+const LeftComponent = ({ setOutput, setLoadingState }) => {
   const [topic, setTopic] = useState("Certi");
   const [pub, setPub] = useState("");
   const [title, setTitle] = useState("");
@@ -11,16 +11,16 @@ const LeftComponent = ({ setOutput }) => {
   const [extraDetails, setExtraDetails] = useState("");
 
   const handleButton = () => {
-    const data = api(
+    api(
       topic,
       pub,
       title,
       duration,
       skill,
       extraDetails,
-      setOutput
+      setOutput,
+      setLoadingState
     );
-    // setOutput(data);
   };
 
   return (
