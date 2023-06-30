@@ -1,12 +1,6 @@
 import React from "react";
 
-const Certification = ({
-  setPub,
-  setTitle,
-  setDuration,
-  setSkills,
-  setExtraDetails,
-}) => {
+const Certification = ({ certificationData, setCertificationData }) => {
   return (
     <>
       <div className="mb-4">
@@ -20,7 +14,10 @@ const Certification = ({
           placeholder="Eg. Coursera, Udemy"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
-            setPub(e.target.value);
+            setCertificationData({
+              ...certificationData,
+              pub: e.target.value,
+            });
           }}
         />
       </div>
@@ -35,7 +32,10 @@ const Certification = ({
           placeholder="Eg. Frontend by META"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
-            setTitle(e.target.value);
+            setCertificationData({
+              ...certificationData,
+              title: e.target.value,
+            });
           }}
         />
       </div>
@@ -50,7 +50,10 @@ const Certification = ({
           placeholder="Eg. 3/5 Months/Weaks etc"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
-            setDuration(e.target.value);
+            setCertificationData({
+              ...certificationData,
+              duration: e.target.value,
+            });
           }}
         />
       </div>
@@ -65,7 +68,10 @@ const Certification = ({
           placeholder="Eg. JavaScript, React, etc"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
-            setSkills(e.target.value);
+            setCertificationData({
+              ...certificationData,
+              skill: e.target.value,
+            });
           }}
         />
       </div>
@@ -80,7 +86,10 @@ const Certification = ({
           placeholder="Eg. Info related to course, etc"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
-            setExtraDetails(e.target.value);
+            setCertificationData({
+              ...certificationData,
+              extraDetails: e.target.value,
+            });
           }}
         />
       </div>

@@ -6,29 +6,31 @@ import Conference from "./Topics/Conference";
 
 const LeftComponent = ({ setOutput, setLoadingState }) => {
   const [topic, setTopic] = useState("certification");
-  const [pub, setPub] = useState("");
-  const [title, setTitle] = useState("");
-  const [duration, setDuration] = useState("");
-  const [skill, setSkills] = useState("");
-  const [extraDetails, setExtraDetails] = useState("");
+
+  const [certificationData, setCertificationData] = useState({
+    pub: "",
+    title: "",
+    duration: "",
+    skill: "",
+    extraDetails: "",
+  });
+  const [conferenceData, setConferenceData] = useState({
+    conferenceName: "",
+    location: "",
+    date: "",
+    titleOfResearch: "",
+    teamMembers: "",
+    extraDetails: "",
+  });
 
   const handleButton = () => {
-    api(
-      topic,
-      pub,
-      title,
-      duration,
-      skill,
-      extraDetails,
-      setOutput,
-      setLoadingState
-    );
+    api(topic, certificationData, conferenceData, setOutput, setLoadingState);
   };
 
   return (
     <div className="flex items-center justify-center h-full">
       <div className="leftContainer max-w-md mx-auto p-4">
-        <div className="pb-10">
+        <div className="">
           <h1 className="text-lg text-center">Options</h1>
         </div>
         <div className="mb-4">
@@ -50,15 +52,18 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
 
         {topic === "certification" && (
           <Certification
-            setPub={setPub}
-            setTitle={setTitle}
-            setDuration={setDuration}
-            setSkills={setSkills}
-            setExtraDetails={setExtraDetails}
+            certificationData={certificationData}
+            setCertificationData={setCertificationData}
           />
         )}
 
-        {topic === "conference" && <Conference />}
+        {topic === "conference" && (
+          <Conference
+            conferenceData={conferenceData}
+            setConferenceData={setConferenceData}
+          />
+        )}
+
         <div className="">
           <button onClick={handleButton}>Submit</button>
         </div>

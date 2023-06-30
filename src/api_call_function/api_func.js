@@ -2,11 +2,8 @@ import axios from "axios";
 
 export const api = async (
   topic,
-  pub,
-  title,
-  duration,
-  skill,
-  extraDetails,
+  certificationData,
+  conferenceData,
   setOutput,
   setLoadingState
 ) => {
@@ -14,6 +11,30 @@ export const api = async (
   const api_key = "";
 
   setLoadingState(true);
+
+  let body = ``;
+
+  if (topic === "certification") {
+    body = `
+    Write me a LinkedIn Post on the Topic of ${topic} which is published by ${certificationData.pub}.
+    The course title is ${certificationData.title} and its of duration ${certificationData.duration}.
+    The skills I gained from the course are as follows: ${certificationData.skill}.
+    Here are some extra details for your help: ${certificationData.extraDetails}.
+    Make sure the post is of MAXIMUM 100 words and not more than that. Otherwise you will get a penalty.
+    `;
+  } else if (topic === "conference") {
+    body = `
+    Write me a nice, fun, professional, in markdown format LinkedIn Post on the Topic of ${topic}. The Conference that I attendted to was ${conferenceData.conferenceName}.
+    The location of the conference was - ${conferenceData.location}.
+    The date of the conference at which I presented was - ${conferenceData.date}.
+    The title of our research was ${conferenceData.titleOfResearch}.
+    My Team Members are as follows: ${conferenceData.teamMembers}.
+    Here are some extra details for your help: ${conferenceData.extraDetails}
+    Make sure the post is of MAXIMUM 100 words and emojis and not more than that. Otherwise you will get a penalty.
+    `;
+  }
+
+  console.log(body);
 
   const response = await axios.post(
     `${api_url}`,
@@ -27,13 +48,7 @@ export const api = async (
         },
         {
           role: "user",
-          content: `
-          Write me a LinkedIn Post on the Topic of ${topic} which is published by ${pub}.
-          The course title is ${title} and its of duration ${duration}.
-          The skills I gained from the course are as follows: ${skill}.
-          Here are some extra details for your help: ${extraDetails}.
-          Make sure the post is of MAXIMUM 100 words and not more than that. Otherwise you will get a penalty.
-          `,
+          content: body,
         },
       ],
     },
