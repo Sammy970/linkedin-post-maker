@@ -3,6 +3,7 @@ import "./LeftComponent.css";
 import { api } from "../api_call_function/api_func";
 import Certification from "./Topics/Certification";
 import Conference from "./Topics/Conference";
+import Others from "./Topics/Others";
 
 const LeftComponent = ({ setOutput, setLoadingState }) => {
   const [topic, setTopic] = useState("certification");
@@ -22,9 +23,19 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
     teamMembers: "",
     extraDetails: "",
   });
+  const [othersData, setOthersData] = useState({
+    details: "",
+  });
 
   const handleButton = () => {
-    api(topic, certificationData, conferenceData, setOutput, setLoadingState);
+    api(
+      topic,
+      certificationData,
+      conferenceData,
+      othersData,
+      setOutput,
+      setLoadingState
+    );
   };
 
   return (
@@ -62,6 +73,10 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
             conferenceData={conferenceData}
             setConferenceData={setConferenceData}
           />
+        )}
+
+        {topic === "others" && (
+          <Others othersData={othersData} setOthersData={setOthersData} />
         )}
 
         <div className="">
