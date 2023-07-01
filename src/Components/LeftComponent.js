@@ -43,6 +43,7 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
       topic,
       certificationData,
       conferenceData,
+      internData,
       othersData,
       setOutput,
       setLoadingState
@@ -69,7 +70,7 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
           >
             <option value="certification">Certification</option>
             <option value="conference">Conference</option>
-            <option value="intern">Internship</option>
+            <option value="internship">Internship</option>
             <option value="others">Other Topic</option>
           </select>
         </div>
@@ -88,7 +89,7 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
           />
         )}
         
-        {topic === "intern" && (
+        {topic === "internship" && (
           <Intern internData={internData} setInternData={setInternData} />
         )}
 

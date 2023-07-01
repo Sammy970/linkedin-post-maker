@@ -4,12 +4,13 @@ export const api = async (
   topic,
   certificationData,
   conferenceData,
+  internData,
   othersData,
   setOutput,
   setLoadingState
 ) => {
   const api_url = "https://chimeragpt.adventblocks.cc/v1/chat/completions";
-  const api_key = "";
+  const api_key = "u60hevlh8BewpPrqUJtGBkae4ZsvMuFxeUEE8A0s-E0";
 
   setLoadingState(true);
 
@@ -36,6 +37,16 @@ export const api = async (
   } else if (topic === "others") {
     body = `
     Write me a nice, fun, professional, in markdown format LinkedIn Post with the following Details: ${othersData.details}
+    Make sure the post is of MAXIMUM 100 words and emojis and not more than that. Otherwise you will get a penalty.
+    `;
+  } else if (topic === "internship") {
+    body = `
+    Write me a nice, fun, professional, in markdown format LinkedIn Post on the topic of ${topic}. 
+    The Company Name in which I got the intership is ${internData.companyName}. 
+    The Position that I got is ${internData.position}. 
+    The duration of the internship is ${internData.duration}. 
+    I got the internship from ${internData.platform}.     
+    Here are some extra details for your help: ${internData.extraDetails}
     Make sure the post is of MAXIMUM 100 words and emojis and not more than that. Otherwise you will get a penalty.
     `;
   }
