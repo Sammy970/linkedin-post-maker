@@ -87,7 +87,8 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
             setConferenceData={setConferenceData}
           />
         )}
-         {topic === "intern" && (
+        
+        {topic === "intern" && (
           <Intern internData={internData} setInternData={setInternData} />
         )}
 

@@ -4,6 +4,7 @@ export const api = async (
   topic,
   certificationData,
   conferenceData,
+  othersData,
   setOutput,
   setLoadingState
 ) => {
@@ -30,6 +31,11 @@ export const api = async (
     The title of our research was ${conferenceData.titleOfResearch}.
     My Team Members are as follows: ${conferenceData.teamMembers}.
     Here are some extra details for your help: ${conferenceData.extraDetails}
+    Make sure the post is of MAXIMUM 100 words and emojis and not more than that. Otherwise you will get a penalty.
+    `;
+  } else if (topic === "others") {
+    body = `
+    Write me a nice, fun, professional, in markdown format LinkedIn Post with the following Details: ${othersData.details}
     Make sure the post is of MAXIMUM 100 words and emojis and not more than that. Otherwise you will get a penalty.
     `;
   }
