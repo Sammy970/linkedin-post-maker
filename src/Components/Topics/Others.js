@@ -1,5 +1,9 @@
 import React from "react";
 
+const style = {
+  height: "300px",
+};
+
 const Others = ({ othersData, setOthersData }) => {
   return (
     <>
@@ -8,10 +12,11 @@ const Others = ({ othersData, setOthersData }) => {
           Details about the Post:
         </label>
         <textarea
+          style={style}
           type="text"
           id="textInput"
           name="textInput"
-          placeholder="Eg. Coursera, Udemy"
+          placeholder="Eg. post about Latest Technology, etc..."
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
             setOthersData({
