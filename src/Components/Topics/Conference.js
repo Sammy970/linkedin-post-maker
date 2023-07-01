@@ -11,7 +11,7 @@ const Conference = ({ conferenceData, setConferenceData }) => {
           type="text"
           id="textInput"
           name="textInput"
-          placeholder="Eg. Coursera, Udemy"
+          placeholder="Eg. 15th International Conference on Science, Technology and Management (ICSTM-2023)"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
             setConferenceData({
@@ -29,7 +29,7 @@ const Conference = ({ conferenceData, setConferenceData }) => {
           type="text"
           id="textInput"
           name="textInput"
-          placeholder="Eg. Frontend by META"
+          placeholder="Eg. Pune/MIT WPU Pune"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
             setConferenceData({
@@ -47,7 +47,7 @@ const Conference = ({ conferenceData, setConferenceData }) => {
           type="text"
           id="textInput"
           name="textInput"
-          placeholder="Eg. 3/5 Months/Weaks etc"
+          placeholder="Eg. 3rd May 2023"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
             setConferenceData({
@@ -65,7 +65,7 @@ const Conference = ({ conferenceData, setConferenceData }) => {
           type="text"
           id="textInput"
           name="textInput"
-          placeholder="Eg. JavaScript, React, etc"
+          placeholder="Eg. Close space Parameter Monitoring System"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
             setConferenceData({
@@ -83,7 +83,7 @@ const Conference = ({ conferenceData, setConferenceData }) => {
           type="text"
           id="textInput"
           name="textInput"
-          placeholder="Eg. Info related to course, etc"
+          placeholder="Eg. Rutuj Saraf , Samyak Jain"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
             setConferenceData({
@@ -101,7 +101,7 @@ const Conference = ({ conferenceData, setConferenceData }) => {
           type="text"
           id="textInput"
           name="textInput"
-          placeholder="Eg. Info related to course, etc"
+          placeholder="Eg. Info related to conference, etc"
           className="block w-full p-2 border border-gray-300 rounded-md"
           onChange={(e) => {
             setConferenceData({
