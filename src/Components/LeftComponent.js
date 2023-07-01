@@ -29,7 +29,7 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
     details: "",
   });
 
-  const [interndata, setInternData] = useState({});
+  const [internData, setInternData] = useState({});
 
   const handleButton = () => {
     api(
@@ -79,6 +79,9 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
             conferenceData={conferenceData}
             setConferenceData={setConferenceData}
           />
+        )}
+         {topic === "intern" && (
+          <Intern internData={internData} setInternData={setInternData} />
         )}
 
         {topic === "others" && (
