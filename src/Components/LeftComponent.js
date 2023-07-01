@@ -3,6 +3,8 @@ import "./LeftComponent.css";
 import { api } from "../api_call_function/api_func";
 import Certification from "./Topics/Certification";
 import Conference from "./Topics/Conference";
+import Others from "./Topics/Others";
+import Intern from "./Topics/Intern";
 
 const LeftComponent = ({ setOutput, setLoadingState }) => {
   const [topic, setTopic] = useState("certification");
@@ -22,13 +24,12 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
     teamMembers: "",
     extraDetails: "",
   });
+
   const [othersData, setOthersData] = useState({
     details: "",
   });
 
-  const [interndata, setInternData] = usestate({
-    
-  })
+  const [interndata, setInternData] = usestate({});
 
   const handleButton = () => {
     api(
