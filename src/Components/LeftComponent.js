@@ -62,6 +62,7 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
           >
             <option value="certification">Certification</option>
             <option value="conference">Conference</option>
+            <option value="intern">Internship</option>
             <option value="others">Other Topic</option>
           </select>
         </div>
