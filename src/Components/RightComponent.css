@@ -14,6 +14,21 @@
   }
 }
 
+.copy-button {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #383636;
+  padding: 6px 10px 6px 10px;
+  border-radius: 10px;
+}
+
+.copy-button p {
+  color: beige;
+}
+
 @keyframes spinner {
   0% {
     transform: rotate(0deg);

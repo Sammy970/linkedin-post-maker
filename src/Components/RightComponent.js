@@ -1,6 +1,10 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
 // Importing CSS
 import "./RightComponent.css";
@@ -12,9 +16,16 @@ const RightComponent = ({ output, loadingState }) => {
   return (
     <div className="flex items-center justify-center h-full">
       <div className="rightContainer p-4">
-        <div className="pb-10">
+        <div className="pb-6">
           <h1 className="text-lg text-center">Output</h1>
+          <CopyToClipboard text={output}>
+            <button className="copy-button">
+              <FontAwesomeIcon color="beige" icon={faCopy} size="lg" />
+              <p>Copy</p>
+            </button>
+          </CopyToClipboard>
         </div>
+
         <div className="pb-10">
           {loadingState === true ? (
             <div className="loading-spinner"></div>
