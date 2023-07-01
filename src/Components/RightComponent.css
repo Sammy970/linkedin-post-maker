@@ -5,6 +5,15 @@
   margin-right: auto;
 }
 
+@media (max-width: 425px) {
+  .rightContainer {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+  }
+}
+
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
