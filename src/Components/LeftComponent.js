@@ -29,7 +29,14 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
     details: "",
   });
 
-  const [internData, setInternData] = useState({});
+  const [internData, setInternData] = useState({
+    companyName: "",
+    position:"",
+    duration:"",
+    platform: "",
+    extraDetails: "",
+
+  });
 
   const handleButton = () => {
     api(
