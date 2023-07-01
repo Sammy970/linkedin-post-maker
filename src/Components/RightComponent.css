@@ -29,6 +29,10 @@
   color: beige;
 }
 
+.copy-button:active {
+  background-color: #524d4d;
+}
+
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
