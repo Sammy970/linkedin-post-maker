@@ -57,7 +57,7 @@ export const api = async (
   const response = await axios.post(
     `${api_url}`,
     {
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo-0613",
       messages: [
         {
           role: "system",
@@ -78,5 +78,6 @@ export const api = async (
   );
   const data = await response.data.choices[0].message.content;
   setLoadingState(false);
+  // console.log(data)
   setOutput(data);
 };
