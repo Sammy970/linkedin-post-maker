@@ -11,7 +11,7 @@ export const api = async (
   setLoadingState
 ) => {
   const api_url = "https://chimeragpt.adventblocks.cc/v1/chat/completions";
-  const api_key = `${REACT_APP_API_KEY}`;
+  // const api_key = "Redacted";
 
   // console.log(REACT_APP_API_KEY);
 
@@ -57,7 +57,7 @@ export const api = async (
   const response = await axios.post(
     `${api_url}`,
     {
-      model: "gpt-3.5-turbo-16k",
+      model: "gpt-3.5-turbo",
       messages: [
         {
           role: "system",
@@ -72,7 +72,7 @@ export const api = async (
     },
     {
       headers: {
-        Authorization: `Bearer ${api_key}`,
+        Authorization: `Bearer ${REACT_APP_API_KEY}`,
       },
     }
   );
