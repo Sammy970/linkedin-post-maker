@@ -24,8 +24,8 @@ const RightComponent = ({ output, loadingState }) => {
   }, [alertShow]);
 
   return (
-    <div className="bgImage flex items-center justify-center h-full">
-      <div className="bgRight rightContainer p-4">
+    <div className="bgImage flex items-center justify-center h-full lg:pt-9">
+      <div className="bgRight rightContainer p-4 ">
         <div className="pb-6">
           <h1 className="text-lg text-center titleText mb-4">Output</h1>
           <div className="mb-3">

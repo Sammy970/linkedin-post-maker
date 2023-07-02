@@ -52,7 +52,7 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
   };
 
   return (
-    <div className="flex items-center justify-center h-full">
+    <div className="flex items-center justify-center h-full pt-4">
       <div className="bgLeft leftContainer max-w-md mx-auto p-4">
         <div className="">
           <h1 className="text-center titleText">Options</h1>

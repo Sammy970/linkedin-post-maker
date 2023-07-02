@@ -25,7 +25,7 @@ export const api = async (
     The course title is ${certificationData.title} and its of duration ${certificationData.duration}.
     The skills I gained from the course are as follows: ${certificationData.skill}.
     Here are some extra details for your help: ${certificationData.extraDetails}.
-    Make sure the post is of MAXIMUM 100 words and not more than that. Otherwise you will get a penalty.
+    Make sure the post is of MAXIMUM 120 words and not more than that. Otherwise you will get a penalty.
     `;
   } else if (topic === "conference") {
     body = `
@@ -35,12 +35,12 @@ export const api = async (
     The title of our research was ${conferenceData.titleOfResearch}.
     My Team Members are as follows: ${conferenceData.teamMembers}.
     Here are some extra details for your help: ${conferenceData.extraDetails}
-    Make sure the post is of MAXIMUM 100 words and emojis and not more than that. Otherwise you will get a penalty.
+    Make sure the post is of MAXIMUM 120 words and emojis and not more than that. Otherwise you will get a penalty.
     `;
   } else if (topic === "others") {
     body = `
     Write me a nice, fun, professional, in markdown format LinkedIn Post with the following Details: ${othersData.details}
-    Make sure the post is of MAXIMUM 100 words and emojis and not more than that. Otherwise you will get a penalty.
+    Make sure the post is of MAXIMUM 120 words and emojis and not more than that. Otherwise you will get a penalty.
     `;
   } else if (topic === "internship") {
     body = `
@@ -50,7 +50,7 @@ export const api = async (
     The duration of the internship is ${internData.duration}. 
     I got the internship from ${internData.platform}.     
     Here are some extra details for your help: ${internData.extraDetails}
-    Make sure the post is of MAXIMUM 100 words and emojis and not more than that. Otherwise you will get a penalty.
+    Make sure the post is of MAXIMUM 120 words and emojis and not more than that. Otherwise you will get a penalty.
     `;
   }
 

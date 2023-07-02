@@ -35,7 +35,7 @@
   padding: 6px 10px 6px 10px;
   border-radius: 10px;
   border: 2px solid #ffffff;
-  box-shadow: 0px 4px 0px #C3C6D1;
+  box-shadow: 0px 4px 0px #c3c6d1;
 }
 
 .copy-button p {
@@ -45,8 +45,8 @@
 }
 
 .copy-button:hover {
-  box-shadow: 0px 4px 0px #0CA678;
-  border: 2px solid #0CA678;
+  box-shadow: 0px 4px 0px #0ca678;
+  border: 2px solid #0ca678;
 }
 
 @keyframes spinner {

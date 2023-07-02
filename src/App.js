@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className="bgApp grid-rows-auto">
+      <div className="bgApp grid-rows-auto h-full">
         <div className="title">
           <h1>
             <span className="specialWord">LinkedIn</span> Post-Maker
@@ -33,7 +33,7 @@ function App() {
             </span>
           </h1>
         </div>
-        <div className="grid lg:grid-cols-2 h-screen">
+        <div className="grid lg:grid-cols-2">
           <div className="w-full bg1">
             <LeftComponent
               setOutput={setOutput}

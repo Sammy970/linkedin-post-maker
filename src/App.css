@@ -51,6 +51,7 @@
   background-image: url("https://fontawesome.com/images/pro-upgrade-bg.svg");
   background-color: #f0f1f3;
   background-size: auto;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 430px) {
