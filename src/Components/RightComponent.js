@@ -30,7 +30,10 @@ const RightComponent = ({ output, loadingState }) => {
           <h1 className="text-lg text-center titleText mb-4">Output</h1>
           <div className="mb-3">
             <CopyToClipboard text={output}>
-              <button className="copy-button" onClick={() => setAlertShow(true)}>
+              <button
+                className="copy-button"
+                onClick={() => setAlertShow(true)}
+              >
                 <FontAwesomeIcon color="#183153" icon={faCopy} size="lg" />
                 <p>Copy</p>
               </button>
@@ -47,7 +50,10 @@ const RightComponent = ({ output, loadingState }) => {
 
         <div className="outputText mb-4">
           {loadingState === true ? (
-            <div className="loading-spinner"></div>
+            <>
+              <div className="loading-spinner"></div>
+              <h1>Please wait 1 - 2 Minutes <br /> [If not loaded, please refresh and try again after few Minutes]</h1>
+            </>
           ) : (
             <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />
           )}
