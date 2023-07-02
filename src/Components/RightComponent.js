@@ -24,14 +24,14 @@ const RightComponent = ({ output, loadingState }) => {
   }, [alertShow]);
 
   return (
-    <div className="flex items-center justify-center h-full">
-      <div className="rightContainer p-4">
+    <div className="bgImage flex items-center justify-center h-full">
+      <div className="bgRight rightContainer p-4">
         <div className="pb-6">
-          <h1 className="text-lg text-center">Output</h1>
-          <div className="mb-4">
+          <h1 className="text-lg text-center titleText mb-4">Output</h1>
+          <div className="mb-3">
             <CopyToClipboard text={output}>
               <button className="copy-button" onClick={() => setAlertShow(true)}>
-                <FontAwesomeIcon color="beige" icon={faCopy} size="lg" />
+                <FontAwesomeIcon color="#183153" icon={faCopy} size="lg" />
                 <p>Copy</p>
               </button>
             </CopyToClipboard>
@@ -45,7 +45,7 @@ const RightComponent = ({ output, loadingState }) => {
           </div>
         </div>
 
-        <div className="pb-10">
+        <div className="outputText mb-4">
           {loadingState === true ? (
             <div className="loading-spinner"></div>
           ) : (

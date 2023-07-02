@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className="grid lg:grid-cols-2 h-screen">
+      <div className="bgApp grid lg:grid-cols-2 h-screen">
         <div className="w-full bg1">
           <LeftComponent
             setOutput={setOutput}

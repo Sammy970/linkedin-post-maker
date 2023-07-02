@@ -17,7 +17,7 @@ const Others = ({ othersData, setOthersData }) => {
           id="textInput"
           name="textInput"
           placeholder="Eg. post about Latest Technology, etc..."
-          className="block w-full p-2 border border-gray-300 rounded-md"
+          className="block w-full p-2   rounded-md"
           onChange={(e) => {
             setOthersData({
               ...othersData,

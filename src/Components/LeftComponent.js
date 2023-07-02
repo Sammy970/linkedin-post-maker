@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./LeftComponent.css";
 import { api } from "../api_call_function/api_func";
+
+// Importing Topic Components
 import Certification from "./Topics/Certification";
 import Conference from "./Topics/Conference";
 import Others from "./Topics/Others";
@@ -31,11 +33,10 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
 
   const [internData, setInternData] = useState({
     companyName: "",
-    position:"",
-    duration:"",
+    position: "",
+    duration: "",
     platform: "",
     extraDetails: "",
-
   });
 
   const handleButton = () => {
@@ -52,9 +53,9 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
 
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="leftContainer max-w-md mx-auto p-4">
+      <div className="bgLeft leftContainer max-w-md mx-auto p-4">
         <div className="">
-          <h1 className="text-lg text-center">Options</h1>
+          <h1 className="text-center titleText">Options</h1>
         </div>
         <div className="mb-4">
           <label htmlFor="selectOption" className="block font-medium mb-1">
@@ -88,7 +89,7 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
             setConferenceData={setConferenceData}
           />
         )}
-        
+
         {topic === "internship" && (
           <Intern internData={internData} setInternData={setInternData} />
         )}
@@ -97,7 +98,7 @@ const LeftComponent = ({ setOutput, setLoadingState }) => {
           <Others othersData={othersData} setOthersData={setOthersData} />
         )}
 
-        <div className="">
+        <div className="submitBtn">
           <button onClick={handleButton}>Submit</button>
         </div>
       </div>

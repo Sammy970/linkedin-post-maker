@@ -1,5 +1,6 @@
 .bg {
-  background-color: rgb(134, 202, 204);
+  /* background-color: rgb(134, 202, 204); */
+  background-color: #0CA678;
   padding: 17px;
   border-radius: 10px;
   color: black;
@@ -8,7 +9,7 @@
 }
 
 .bg p {
-  color: rgba(42, 42, 39,);
+  color: beige;
   font-size: larger;
   font-weight: 550;
 }

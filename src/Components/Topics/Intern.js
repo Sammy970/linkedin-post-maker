@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const Intern = ({internData, setInternData}) => {
+const Intern = ({ internData, setInternData }) => {
   return (
     <>
       <div className="mb-4">
@@ -12,7 +12,7 @@ const Intern = ({internData, setInternData}) => {
           id="textInput"
           name="textInput"
           placeholder="Eg. Amazon, Google, Microsoft etc"
-          className="block w-full p-2 border border-gray-300 rounded-md"
+          className="block w-full p-2     rounded-md"
           onChange={(e) => {
             setInternData({
               ...internData,
@@ -30,7 +30,7 @@ const Intern = ({internData, setInternData}) => {
           id="textInput"
           name="textInput"
           placeholder="Eg. FrontEnd Intern"
-          className="block w-full p-2 border border-gray-300 rounded-md"
+          className="block w-full p-2     rounded-md"
           onChange={(e) => {
             setInternData({
               ...internData,
@@ -48,7 +48,7 @@ const Intern = ({internData, setInternData}) => {
           id="textInput"
           name="textInput"
           placeholder="Eg. 6 Months"
-          className="block w-full p-2 border border-gray-300 rounded-md"
+          className="block w-full p-2     rounded-md"
           onChange={(e) => {
             setInternData({
               ...internData,
@@ -66,7 +66,7 @@ const Intern = ({internData, setInternData}) => {
           id="textInput"
           name="textInput"
           placeholder="Eg. Internshala, Indeed, College TPO, etc"
-          className="block w-full p-2 border border-gray-300 rounded-md"
+          className="block w-full p-2     rounded-md"
           onChange={(e) => {
             setInternData({
               ...internData,
@@ -84,7 +84,7 @@ const Intern = ({internData, setInternData}) => {
           id="textInput"
           name="textInput"
           placeholder="Eg. Other Details about the internship"
-          className="block w-full p-2 border border-gray-300 rounded-md"
+          className="block w-full p-2     rounded-md"
           onChange={(e) => {
             setInternData({
               ...internData,
@@ -93,8 +93,8 @@ const Intern = ({internData, setInternData}) => {
           }}
         />
       </div>
-      </>
-  )
-}
+    </>
+  );
+};
 
-export default Intern
+export default Intern;

@@ -1,8 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Belanosima&display=swap");
+
+.bgLeft {
+  background-color: #ffd43b;
+  box-shadow: -4px 6px 0px #183153;
+}
+
+.titleText {
+  font-size: 32px;
+  font-weight: 700;
+  color: #183153;
+  letter-spacing: 2px;
+}
+
 .leftContainer {
   border-radius: 10px;
-  border: 1px solid black;
+  border: 3px solid #183153;
   width: 550px;
   /* padding: 40px 80px 40px 80px; */
+}
+
+label {
+  color: #183153;
+  font-size: 20px;
+  font-family: "Belanosima", sans-serif;
+}
+
+input,
+textarea {
+  text-decoration: dotted;
+}
+
+select {
+  outline: none;
+  box-shadow: -2px 4px 0px #183153;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border: 3px solid #183153;
+  box-shadow: -2px 3px 0px #183153;
+}
+
+.submitBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.submitBtn button {
+  background-color: #ffffff;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #183153;
+  font-weight: 500;
+  box-shadow: 0px 4px 0px #c3c6d1;
+}
+
+button:hover {
+  box-shadow: 0px 4px 0px #183153;
 }
 
 @media (max-width: 425px) {
@@ -12,5 +70,9 @@
     margin-left: auto;
     margin-right: auto;
     width: 290px;
+  }
+
+  .titleText {
+    font-size: 27px;
   }
 }

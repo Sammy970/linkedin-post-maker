@@ -1,17 +1,29 @@
-.rightContainer {
-  border-radius: 10px;
-  border: 1px solid black;
-  width: 650px;
-  margin-right: auto;
+.bgRight {
+  background-color: #f0f1f3;
+  box-shadow: 8px 8px 0px #183153;
 }
 
-@media (max-width: 425px) {
-  .rightContainer {
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 330px;
-  }
+@font-face {
+  font-family: "ceraroundpro";
+  src: url("../../public/fonts/ceraroundpro-bold.otf") format("otf");
+}
+
+.outputText {
+  font-size: 18px;
+  color: #183153;
+  line-height: 38px;
+  font-family: "ceraroundpro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 450;
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.rightContainer {
+  border-radius: 10px;
+  border: 3px solid #183153;
+  width: 650px;
+  margin-right: auto;
 }
 
 .copy-button {
@@ -19,18 +31,22 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
-
-  background-color: #383636;
+  background-color: #ffffff;
   padding: 6px 10px 6px 10px;
   border-radius: 10px;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 4px 0px #C3C6D1;
 }
 
 .copy-button p {
-  color: beige;
+  color: #183153;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-.copy-button:active {
-  background-color: #524d4d;
+.copy-button:hover {
+  box-shadow: 0px 4px 0px #0CA678;
+  border: 2px solid #0CA678;
 }
 
 @keyframes spinner {
@@ -50,4 +66,25 @@
   animation: spinner 2s linear infinite;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 425px) {
+  .rightContainer {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+  }
+
+  .bgImage {
+    background-image: url("https://fontawesome.com/images/pro-upgrade-bg.svg");
+    background-color: #f0f1f3;
+    background-size: auto;
+  }
+
+  .outputText {
+    font-size: 17px;
+    line-height: 34px;
+    text-align: justify;
+  }
 }

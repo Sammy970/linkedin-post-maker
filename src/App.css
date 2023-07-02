@@ -1,3 +1,8 @@
+.bgApp {
+  background-image: url("https://fontawesome.com/images/pro-upgrade-bg.svg");
+  background-color: #f0f1f3;
+  background-size: auto;
+}
 
 .App {
   text-align: center;
