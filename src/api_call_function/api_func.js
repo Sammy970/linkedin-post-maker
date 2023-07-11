@@ -57,7 +57,7 @@ export const api = async (
   const response = await axios.post(
     `${api_url}`,
     {
-      model: "gpt-3.5-turbo-0613",
+      model: "gpt-3.5-turbo-16k",
       messages: [
         {
           role: "system",
