@@ -10,7 +10,7 @@ export const api = async (
   setOutput,
   setLoadingState
 ) => {
-  const api_url = "https://chimeragpt.adventblocks.cc/v1/chat/completions";
+  const api_url = "https://chimeragpt.adventblocks.cc/api/v1/chat/completions";
   // const api_key = "Redacted";
 
   // console.log(REACT_APP_API_KEY);
