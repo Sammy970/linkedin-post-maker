@@ -21,7 +21,7 @@ export const api = async (
 
   if (topic === "certification") {
     body = `
-    Write me a LinkedIn Post on the Topic of ${topic} which is published by ${certificationData.pub}.
+    Write me a LinkedIn Post on the Topic of ${topic} which I had completed and is published by ${certificationData.pub}.
     The course title is ${certificationData.title} and its of duration ${certificationData.duration}.
     The skills I gained from the course are as follows: ${certificationData.skill}.
     Here are some extra details for your help: ${certificationData.extraDetails}.
