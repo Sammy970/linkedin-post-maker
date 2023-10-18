@@ -21,11 +21,10 @@ export const api = async (
 
   if (topic === "certification") {
     body = `
-    Write me a LinkedIn Post on the Topic of ${topic} which I had completed and is published by ${certificationData.pub}.
+    Write me a Short LinkedIn Post on the Topic of ${topic} which I had completed and is published by ${certificationData.pub}.
     The course title is ${certificationData.title} and its of duration ${certificationData.duration}.
     The skills I gained from the course are as follows: ${certificationData.skill}.
     Here are some extra details for your help: ${certificationData.extraDetails}.
-    Make sure the post is of MAXIMUM 100 words and not more than that. Otherwise you will get a penalty.
     `;
   } else if (topic === "conference") {
     body = `
@@ -40,7 +39,7 @@ export const api = async (
   } else if (topic === "others") {
     body = `
     Write me a nice, fun, professional, in markdown format LinkedIn Post with the following Details: ${othersData.details}
-    Make sure the post is of MAXIMUM 100 words and emojis and not more than that. Otherwise you will get a penalty.
+    Make sure the post is of MAXIMUM 50 words and emojis and not more than that. Otherwise you will get a penalty.
     `;
   } else if (topic === "internship") {
     body = `
@@ -50,7 +49,7 @@ export const api = async (
     The duration of the internship is ${internData.duration}. 
     I got the internship from ${internData.platform}.     
     Here are some extra details for your help: ${internData.extraDetails}
-    Make sure the post is of MAXIMUM 100 words and emojis and not more than that. Otherwise you will get a penalty.
+    Make sure the post is of MAXIMUM 50 words and emojis and not more than that. Otherwise you will get a penalty.
     `;
   }
 
@@ -58,12 +57,12 @@ export const api = async (
     `${api_url}`,
     {
       model: "pai-001-light-beta",
-      max_tokens: 120,
+      temperature: 0.5,
       messages: [
         {
           role: "system",
           content:
-            "You are a LinkedIn Post Maker. Our users will give you info about what they want and you will respond to that accordingly. Make sure your response is in line with a LinkedIn Post because your response will be used in LinkedIn Post. Make sure that the post is only a max of 100 Words You will not answer anything else. Make sure to respond everything in Markdown code which is compatible with React Markdown as I am using React Markdown to display your messages.",
+            "You are a LinkedIn Post Maker. Our users will give you info about what they want and you will respond to that accordingly. Make sure your response is in line with a LinkedIn Post because your response will be used in LinkedIn Post. You will not answer anything else. Make sure to respond everything in Markdown code which is compatible with React Markdown as I am using React Markdown to display your messages.",
         },
         {
           role: "user",
