@@ -24,25 +24,17 @@ function App() {
               <a href="https://www.linkedin.com/in/samyak-jain-3a6639172/">
                 Samyak Jain
               </a>
-            </span>{" "}
-            and{" "}
-            <span className="specialWord2">
-              <a href="https://www.linkedin.com/in/rutuj-saraf-597994228/">
-                Rutuj Saraf
-              </a>
             </span>
           </h1>
         </div>
-        <div className="grid lg:grid-cols-2">
+        <div className="grid lg:grid-cols-2 max-sm:grid-cols-1 max-sm:gap-5 md:gap-8">
           <div className="w-full bg1">
             <LeftComponent
               setOutput={setOutput}
               setLoadingState={setLoadingState}
             />
           </div>
-          <div className="w-full bg2">
-            <RightComponent output={output} loadingState={loadingState} />
-          </div>
+          <RightComponent output={output} loadingState={loadingState} />
         </div>
       </div>
     </>

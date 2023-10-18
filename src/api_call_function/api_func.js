@@ -1,5 +1,5 @@
 import axios from "axios";
-const { REACT_APP_API_KEY } = process.env;
+const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
 
 export const api = async (
   topic,
@@ -10,7 +10,7 @@ export const api = async (
   setOutput,
   setLoadingState
 ) => {
-  const api_url = "https://chimeragpt.adventblocks.cc/v1/chat/completions";
+  const api_url = "https://api.pawan.krd/v1/chat/completions";
   // const api_key = "Redacted";
 
   // console.log(REACT_APP_API_KEY);
@@ -57,7 +57,8 @@ export const api = async (
   const response = await axios.post(
     `${api_url}`,
     {
-      model: "gpt-3.5-turbo-0613",
+      model: "pai-001-light-beta",
+      max_tokens: 100,
       messages: [
         {
           role: "system",
@@ -77,6 +78,7 @@ export const api = async (
     }
   );
   const data = await response.data.choices[0].message.content;
+  console.log(data);
   setLoadingState(false);
   // console.log(data)
   setOutput(data);

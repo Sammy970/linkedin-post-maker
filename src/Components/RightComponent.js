@@ -24,40 +24,38 @@ const RightComponent = ({ output, loadingState }) => {
   }, [alertShow]);
 
   return (
-    <div className="bgImage flex items-center justify-center h-full lg:pt-9">
-      <div className="bgRight rightContainer p-4 ">
-        <div className="pb-6">
-          <h1 className="text-lg text-center titleText mb-4">Output</h1>
-          <div className="mb-3">
-            <CopyToClipboard text={output}>
-              <button
-                className="copy-button"
-                onClick={() => setAlertShow(true)}
-              >
-                <FontAwesomeIcon color="#183153" icon={faCopy} size="lg" />
-                <p>Copy</p>
-              </button>
-            </CopyToClipboard>
-          </div>
-          <div>
-            {alertShow && (
-              <>
-                <AlertCopy setAlertShow={setAlertShow} />
-              </>
-            )}
-          </div>
+    <div className="bgRight m-auto rightContainer p-4 w-full pt-6">
+      <div className="pb-6">
+        <h1 className="text-lg text-center titleText mb-4">Output</h1>
+        <div className="mb-3">
+          <CopyToClipboard text={output}>
+            <button className="copy-button" onClick={() => setAlertShow(true)}>
+              <FontAwesomeIcon color="#183153" icon={faCopy} size="lg" />
+              <p>Copy</p>
+            </button>
+          </CopyToClipboard>
         </div>
-
-        <div className="outputText mb-4">
-          {loadingState === true ? (
+        <div>
+          {alertShow && (
             <>
-              <div className="loading-spinner"></div>
-              <h1>Please wait 1 - 2 Minutes <br /> [If not loaded, please refresh and try again after few Minutes]</h1>
+              <AlertCopy setAlertShow={setAlertShow} />
             </>
-          ) : (
-            <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />
           )}
         </div>
+      </div>
+
+      <div className="outputText mb-4">
+        {loadingState === true ? (
+          <>
+            <div className="loading-spinner"></div>
+            <h1>
+              Please wait 1 - 2 Minutes <br /> [If not loaded, please refresh
+              and try again after few Minutes]
+            </h1>
+          </>
+        ) : (
+          <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />
+        )}
       </div>
     </div>
   );
