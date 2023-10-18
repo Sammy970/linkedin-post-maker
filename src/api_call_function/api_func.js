@@ -58,7 +58,7 @@ export const api = async (
     `${api_url}`,
     {
       model: "pai-001-light-beta",
-      max_tokens: 250,
+      max_tokens: 200,
       messages: [
         {
           role: "system",
